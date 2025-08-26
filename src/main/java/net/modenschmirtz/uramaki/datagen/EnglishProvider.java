@@ -13,12 +13,12 @@ public class EnglishProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        add(ModItems.TUNA.get(), "Tuna");
+        add(ModItems.TUNA.get(), "Raw Tuna");
         add(ModItems.COOKED_TUNA.get(), "Cooked Tuna");
 
-        add(ModItems.COD_FILLET.get(), "Cod Fillet");
-        add(ModItems.SALMON_FILLET.get(), "Salmon Fillet");
-        add(ModItems.TUNA_FILLET.get(), "Tuna Fillet");
+        add(ModItems.COD_FILLET.get(), "Raw Cod Fillet");
+        add(ModItems.SALMON_FILLET.get(), "Raw Salmon Fillet");
+        add(ModItems.TUNA_FILLET.get(), "Raw Tuna Fillet");
 
         add(ModItems.COOKED_COD_FILLET.get(), "Cooked Cod Fillet");
         add(ModItems.COOKED_SALMON_FILLET.get(), "Cooked Salmon Fillet");

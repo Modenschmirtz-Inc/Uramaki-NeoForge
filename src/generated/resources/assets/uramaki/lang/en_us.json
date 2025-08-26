@@ -1,11 +1,11 @@
 {
-  "item.uramaki.cod_fillet": "Cod Fillet",
+  "item.uramaki.cod_fillet": "Raw Cod Fillet",
   "item.uramaki.cooked_cod_fillet": "Cooked Cod Fillet",
   "item.uramaki.cooked_salmon_fillet": "Cooked Salmon Fillet",
   "item.uramaki.cooked_tuna": "Cooked Tuna",
   "item.uramaki.cooked_tuna_fillet": "Cooked Tuna Fillet",
-  "item.uramaki.salmon_fillet": "Salmon Fillet",
-  "item.uramaki.tuna": "Tuna",
-  "item.uramaki.tuna_fillet": "Tuna Fillet",
+  "item.uramaki.salmon_fillet": "Raw Salmon Fillet",
+  "item.uramaki.tuna": "Raw Tuna",
+  "item.uramaki.tuna_fillet": "Raw Tuna Fillet",
   "itemgroup.uramaki.uramaki_items": "Uramaki"
 }
