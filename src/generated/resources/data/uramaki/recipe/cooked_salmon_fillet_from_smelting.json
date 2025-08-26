@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.175,
+  "ingredient": {
+    "item": "uramaki:salmon_fillet"
+  },
+  "result": {
+    "count": 1,
+    "id": "uramaki:cooked_salmon_fillet"
+  }
+}

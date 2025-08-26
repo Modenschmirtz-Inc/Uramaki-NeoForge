@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="uramaki"
+version="1.0.0"
+displayName="Uramaki"
+logoFile = "icon.png"
+authors="Lead Developer: NTRDeal, Designer/Artist: Blockadile, Developer/Artist: Evan2Awesome"
+description="This mod adds sushi, and touches fishing."
+displayURL = "https://modrinth.com/mod/uramaki"
+[[mixins]]
+config="uramaki.mixins.json"
+[[dependencies.uramaki]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.197,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.uramaki]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.uramaki]]
+    modId="geckolib"
+    type="required"
+    versionRange = "[4.7.7,)"
+    ordering = "NONE"
+    side = "BOTH"
