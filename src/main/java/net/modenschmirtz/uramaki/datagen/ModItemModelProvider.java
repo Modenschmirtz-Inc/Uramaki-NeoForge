@@ -14,14 +14,14 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.TUNA.get());
-//        basicItem(ModItems.COOKED_TUNA.get());
+        basicItem(ModItems.COOKED_TUNA.get());
 
         basicItem(ModItems.COD_FILLET.get());
         basicItem(ModItems.SALMON_FILLET.get());
         basicItem(ModItems.TUNA_FILLET.get());
 
 //        basicItem(ModItems.COOKED_COD_FILLET.get());
-//        basicItem(ModItems.COOKED_SALMON_FILLET.get());
+        basicItem(ModItems.COOKED_SALMON_FILLET.get());
 //        basicItem(ModItems.COOKED_TUNA_FILLET.get());
     }
 }
