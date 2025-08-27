@@ -15,6 +15,7 @@ public class EnglishProvider extends LanguageProvider {
     protected void addTranslations() {
         add(ModItems.TUNA.get(), "Raw Tuna");
         add(ModItems.COOKED_TUNA.get(), "Cooked Tuna");
+        add(ModItems.GOLDEN_FISH.get(), "Golden Fish");
 
         add(ModItems.COD_FILLET.get(), "Raw Cod Fillet");
         add(ModItems.SALMON_FILLET.get(), "Raw Salmon Fillet");

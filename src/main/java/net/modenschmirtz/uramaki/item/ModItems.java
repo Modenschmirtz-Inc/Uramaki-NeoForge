@@ -1,6 +1,7 @@
 package net.modenschmirtz.uramaki.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.modenschmirtz.uramaki.Uramaki;
 import net.modenschmirtz.uramaki.item.components.ModFoodProperties;
 import net.neoforged.bus.api.IEventBus;
@@ -14,6 +15,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.TUNA)));
     public static final DeferredItem<Item> COOKED_TUNA = ITEMS.register("cooked_tuna",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_TUNA)));
+    public static final DeferredItem<Item> GOLDEN_FISH = ITEMS.register("golden_fish",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.GOLDEN_FISH).rarity(Rarity.RARE)));
 
     public static final DeferredItem<Item> COD_FILLET = ITEMS.register("cod_fillet",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COD_FILLET)));

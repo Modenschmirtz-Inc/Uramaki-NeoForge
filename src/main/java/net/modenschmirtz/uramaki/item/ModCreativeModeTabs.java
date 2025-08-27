@@ -17,6 +17,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TUNA);
                         output.accept(ModItems.COOKED_TUNA);
+                        output.accept(ModItems.GOLDEN_FISH);
 
                         output.accept(ModItems.COD_FILLET);
                         output.accept(ModItems.SALMON_FILLET);

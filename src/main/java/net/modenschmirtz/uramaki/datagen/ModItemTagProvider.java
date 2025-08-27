@@ -21,7 +21,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        tag(ItemTags.FISHES).add(ModItems.TUNA.get()).add(ModItems.COOKED_TUNA.get());
+        tag(ItemTags.FISHES).add(ModItems.TUNA.get()).add(ModItems.COOKED_TUNA.get()).add(ModItems.GOLDEN_FISH.get());
         tag(Tags.Items.FOODS_RAW_FISH).add(ModItems.TUNA.get());
         tag(Tags.Items.FOODS_COOKED_FISH).add(ModItems.COOKED_TUNA.get());
         tag(ItemTags.OCELOT_FOOD).add(ModItems.TUNA.get());

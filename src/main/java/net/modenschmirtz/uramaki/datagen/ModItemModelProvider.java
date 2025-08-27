@@ -15,6 +15,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.TUNA.get());
         basicItem(ModItems.COOKED_TUNA.get());
+        basicItem(ModItems.GOLDEN_FISH.get());
 
         basicItem(ModItems.COD_FILLET.get());
         basicItem(ModItems.SALMON_FILLET.get());
