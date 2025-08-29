@@ -1,4 +1,5 @@
 {
+  "entity.uramaki.tuna": "Tuna",
   "item.uramaki.cod_fillet": "Raw Cod Fillet",
   "item.uramaki.cooked_cod_fillet": "Cooked Cod Fillet",
   "item.uramaki.cooked_salmon_fillet": "Cooked Salmon Fillet",
@@ -7,6 +8,8 @@
   "item.uramaki.golden_fish": "Golden Fish",
   "item.uramaki.salmon_fillet": "Raw Salmon Fillet",
   "item.uramaki.tuna": "Raw Tuna",
+  "item.uramaki.tuna_bucket": "Bucket of Tuna",
   "item.uramaki.tuna_fillet": "Raw Tuna Fillet",
+  "item.uramaki.tuna_spawn_egg": "Tuna Spawn Egg",
   "itemgroup.uramaki.uramaki_items": "Uramaki"
 }

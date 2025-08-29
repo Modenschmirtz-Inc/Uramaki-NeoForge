@@ -1,10 +1,17 @@
 package net.modenschmirtz.uramaki.item;
 
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.MobBucketItem;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.level.material.Fluids;
 import net.modenschmirtz.uramaki.Uramaki;
+import net.modenschmirtz.uramaki.entity.ModEntities;
 import net.modenschmirtz.uramaki.item.components.ModFoodProperties;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -31,6 +38,17 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_SALMON_FILLET)));
     public static final DeferredItem<Item> COOKED_TUNA_FILLET = ITEMS.register("cooked_tuna_fillet",
             () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_TUNA_FILLET)));
+
+    public static final DeferredItem<Item> TUNA_BUCKET = ITEMS.register("tuna_bucket",
+            () -> new MobBucketItem(
+                    ModEntities.TUNA.get(),
+                    Fluids.WATER,
+                    SoundEvents.BUCKET_EMPTY_FISH,
+                    new Item.Properties().stacksTo(1).component(DataComponents.BUCKET_ENTITY_DATA, CustomData.EMPTY)
+            ));
+
+    public static final DeferredItem<Item> TUNA_SPAWN_EGG = ITEMS.register("tuna_spawn_egg",
+            () -> new DeferredSpawnEggItem(ModEntities.TUNA, 0xeff0f2, 0x62728c, new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

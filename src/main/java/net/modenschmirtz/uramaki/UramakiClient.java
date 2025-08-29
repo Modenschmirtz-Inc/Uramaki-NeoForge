@@ -1,5 +1,8 @@
 package net.modenschmirtz.uramaki;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.modenschmirtz.uramaki.entity.ModEntities;
+import net.modenschmirtz.uramaki.entity.render.TunaRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -15,5 +18,6 @@ public class UramakiClient {
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
+        EntityRenderers.register(ModEntities.TUNA.get(), TunaRenderer::new);
     }
 }

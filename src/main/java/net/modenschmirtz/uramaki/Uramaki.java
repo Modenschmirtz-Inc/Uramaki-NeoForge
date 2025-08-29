@@ -2,6 +2,7 @@ package net.modenschmirtz.uramaki;
 
 import com.mojang.logging.LogUtils;
 import net.modenschmirtz.uramaki.block.ModBlocks;
+import net.modenschmirtz.uramaki.entity.ModEntities;
 import net.modenschmirtz.uramaki.item.ModCreativeModeTabs;
 import net.modenschmirtz.uramaki.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
@@ -18,5 +19,6 @@ public class Uramaki {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModEntities.register(modEventBus);
     }
 }

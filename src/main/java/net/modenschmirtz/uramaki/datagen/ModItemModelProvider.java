@@ -24,5 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 //        basicItem(ModItems.COOKED_COD_FILLET.get());
         basicItem(ModItems.COOKED_SALMON_FILLET.get());
 //        basicItem(ModItems.COOKED_TUNA_FILLET.get());
+
+        withExistingParent(ModItems.TUNA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 }

@@ -2,11 +2,17 @@
   "required": true,
   "package": "net.modenschmirtz.uramaki.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "CrossbowItemMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
   "overwrites": {
     "requireAnnotations": true
-  }
+  },
+  "client": [
+    "ItemModelShaperMixin",
+    "ModelBakeryMixin"
+  ]
 }

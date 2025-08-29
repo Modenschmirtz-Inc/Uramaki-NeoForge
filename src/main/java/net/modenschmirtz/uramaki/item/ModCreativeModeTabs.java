@@ -26,6 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.COOKED_COD_FILLET);
                         output.accept(ModItems.COOKED_SALMON_FILLET);
                         output.accept(ModItems.COOKED_TUNA_FILLET);
+
+                        output.accept(ModItems.TUNA_BUCKET);
+                        output.accept(ModItems.TUNA_SPAWN_EGG);
                     }).build());
 
     public static void register(IEventBus eventBus){
