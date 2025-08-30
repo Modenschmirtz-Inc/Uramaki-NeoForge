@@ -27,6 +27,7 @@ public class EnglishProvider extends LanguageProvider {
         add(ModItems.TUNA_SPAWN_EGG.get(), "Tuna Spawn Egg");
 
         add(ModEntities.TUNA.get(), "Tuna");
+        add(ModEntities.FISH_PROJECTILE.get(), "Fish");
 
         add(ModCreativeModeTabs.URAMAKI_CREATIVE_MODE_TAB.get().getDisplayName().getString(), "Uramaki");
     }

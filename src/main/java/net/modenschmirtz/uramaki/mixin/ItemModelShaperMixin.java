@@ -26,9 +26,9 @@ public class ItemModelShaperMixin {
     private void Injected(ItemStack stack, CallbackInfoReturnable<BakedModel> cir){
         if (stack.getItem() == Items.CROSSBOW && stack.get(DataComponents.CHARGED_PROJECTILES) instanceof ChargedProjectiles component) {
             if (component.contains(ModItems.TUNA.get())) cir.setReturnValue(modelManager.getModel(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(Uramaki.MOD_ID, "crossbow_tuna"))));
+            if (component.contains(ModItems.GOLDEN_FISH.get())) cir.setReturnValue(modelManager.getModel(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(Uramaki.MOD_ID, "crossbow_golden_fish"))));
             if (component.contains(Items.COD)) cir.setReturnValue(modelManager.getModel(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(Uramaki.MOD_ID, "crossbow_cod"))));
             if (component.contains(Items.SALMON)) cir.setReturnValue(modelManager.getModel(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(Uramaki.MOD_ID, "crossbow_salmon"))));
-            if (component.contains(ModItems.GOLDEN_FISH.get())) cir.setReturnValue(modelManager.getModel(ModelResourceLocation.inventory(ResourceLocation.fromNamespaceAndPath(Uramaki.MOD_ID, "crossbow_golden_fish"))));
         }
     }
 }

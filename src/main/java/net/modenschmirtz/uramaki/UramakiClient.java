@@ -2,6 +2,7 @@ package net.modenschmirtz.uramaki;
 
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.modenschmirtz.uramaki.entity.ModEntities;
+import net.modenschmirtz.uramaki.entity.render.FishProjectileRenderer;
 import net.modenschmirtz.uramaki.entity.render.TunaRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,5 +20,6 @@ public class UramakiClient {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntities.TUNA.get(), TunaRenderer::new);
+        EntityRenderers.register(ModEntities.FISH_PROJECTILE.get(), FishProjectileRenderer::new);
     }
 }
