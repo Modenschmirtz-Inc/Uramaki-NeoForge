@@ -64,7 +64,7 @@ public class FishProjectile extends AbstractArrow implements GeoEntity {
     protected void onHitEntity(@NotNull EntityHitResult result) {
         super.onHitEntity(result);
         if (result.getEntity() instanceof LivingEntity entity){
-            if (!this.level().isClientSide && this.getPierceLevel() <= 0) {
+            if (!level().isClientSide && getPierceLevel() <= 0) {
                 entity.setArrowCount(Math.max(entity.getArrowCount() - 1, 0));
             }
         }

@@ -31,6 +31,6 @@ public class EnglishProvider extends LanguageProvider {
 
         add(ModCreativeModeTabs.URAMAKI_CREATIVE_MODE_TAB.get().getDisplayName().getString(), "Uramaki");
 
-        add("sounds.uramaki.entity.fish_projectile.fish_splat", "Fish Splat");
+        add("sounds.uramaki.fish_splat", "Fish Splat");
     }
 }
