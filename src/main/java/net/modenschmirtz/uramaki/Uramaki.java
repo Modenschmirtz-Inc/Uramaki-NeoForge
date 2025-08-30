@@ -5,6 +5,7 @@ import net.modenschmirtz.uramaki.block.ModBlocks;
 import net.modenschmirtz.uramaki.entity.ModEntities;
 import net.modenschmirtz.uramaki.item.ModCreativeModeTabs;
 import net.modenschmirtz.uramaki.item.ModItems;
+import net.modenschmirtz.uramaki.misc.ModSounds;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -20,5 +21,6 @@ public class Uramaki {
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModEntities.register(modEventBus);
+        ModSounds.register(modEventBus);
     }
 }

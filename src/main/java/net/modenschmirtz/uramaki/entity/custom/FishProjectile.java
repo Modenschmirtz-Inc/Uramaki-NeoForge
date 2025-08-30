@@ -1,15 +1,21 @@
 package net.modenschmirtz.uramaki.entity.custom;
 
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.EntityHitResult;
 import net.modenschmirtz.uramaki.entity.ModEntities;
 import net.modenschmirtz.uramaki.item.ModItems;
+import net.modenschmirtz.uramaki.misc.ModSounds;
 import org.jetbrains.annotations.NotNull;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
@@ -27,6 +33,8 @@ public class FishProjectile extends AbstractArrow implements GeoEntity {
     public FishProjectile(Level level, LivingEntity owner, ItemStack stack, ItemStack shotFrom, String variant) {
         super(ModEntities.FISH_PROJECTILE.get(), owner, level, stack, shotFrom);
         setVariant(variant);
+        pickup = Pickup.DISALLOWED;
+        setBaseDamage(1.5);
     }
 
     @Override
@@ -41,6 +49,33 @@ public class FishProjectile extends AbstractArrow implements GeoEntity {
 
     public String getVariant() {
         return this.entityData.get(VARIANT);
+    }
+
+    @Override
+    protected void onHitBlock(@NotNull BlockHitResult result) {
+        super.onHitBlock(result);
+        if (level() instanceof ServerLevel level){
+            level.sendParticles(DustParticleOptions.REDSTONE, getX(), getY(), getZ(), 25, 0.25, 0.25, 0.25, 0.1d);
+        }
+        discard();
+    }
+
+    @Override
+    protected void onHitEntity(@NotNull EntityHitResult result) {
+        super.onHitEntity(result);
+        if (result.getEntity() instanceof LivingEntity entity){
+            if (!this.level().isClientSide && this.getPierceLevel() <= 0) {
+                entity.setArrowCount(Math.max(entity.getArrowCount() - 1, 0));
+            }
+        }
+        if (level() instanceof ServerLevel level){
+            level.sendParticles(DustParticleOptions.REDSTONE, getX(), getY(), getZ(), 25, 0.25, 0.25, 0.25, 0.1d);
+        }
+    }
+
+    @Override
+    protected @NotNull SoundEvent getDefaultHitGroundSoundEvent() {
+        return ModSounds.FISH_SPLAT.get();
     }
 
     @Override

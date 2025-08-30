@@ -1,4 +1,4 @@
-package net.modenschmirtz.uramaki.event;
+package net.modenschmirtz.uramaki.misc;
 
 import net.minecraft.world.entity.animal.AbstractFish;
 import net.modenschmirtz.uramaki.Uramaki;

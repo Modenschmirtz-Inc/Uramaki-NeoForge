@@ -12,5 +12,6 @@
   "item.uramaki.tuna_bucket": "Bucket of Tuna",
   "item.uramaki.tuna_fillet": "Raw Tuna Fillet",
   "item.uramaki.tuna_spawn_egg": "Tuna Spawn Egg",
-  "itemgroup.uramaki.uramaki_items": "Uramaki"
+  "itemgroup.uramaki.uramaki_items": "Uramaki",
+  "sounds.uramaki.entity.fish_projectile.fish_splat": "Fish Splat"
 }
